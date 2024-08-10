@@ -9,9 +9,9 @@ use App\Http\Controllers\ProductController;
 
 Route::get('/', [HomeController::class, 'home']);
 
-Route::get('/products', [ShopController::class, 'index']);
-Route::get('product/{product}', [ShopController::class, 'find']);
-Route::get('/product-update', [ShopController::class, 'updatePivot']);
+Route::get('/products', [ProductController::class, 'index']);
+Route::get('product/{product}', [ProductController::class, 'find']);
+Route::get('/product-update', [ProductController::class, 'updatePivot']);
 
 Route::get('/inventory', [ProductController::class, 'index']);
 
