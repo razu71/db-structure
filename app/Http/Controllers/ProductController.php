@@ -22,11 +22,11 @@ class ProductController extends Controller
         // });
 
         //benchmark of queries
-        Benchmark::dd([
-            fn() => Product::query()->where('id', 1)->first(),
-            fn() => Product::where('id', 1)->first(),
-            fn() => Shop::with('products')->get(),
-        ], 10);
+        // Benchmark::dd([
+        //     fn() => Product::query()->where('id', 1)->first(),
+        //     fn() => Product::where('id', 1)->first(),
+        //     fn() => Shop::with('products')->get(),
+        // ], 10);
 
         return view('products', compact('products'));
     }
